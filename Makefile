@@ -9,6 +9,7 @@ build: clean
 	helm init
 	helm repo add releases ${CHART_REPO}
 	helm repo add jenkins-x http://jenkins-x-chartmuseum:8080
+	helm repo add fabric8 https://fabric8.io/helm
 	helm dependency build ${DIR}
 	helm lint ${DIR}
 
